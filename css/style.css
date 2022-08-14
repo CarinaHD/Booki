@@ -1,0 +1,660 @@
+/*header*/
+.navigator
+{
+    background-color:  rgb(255, 255, 255);
+}
+.menu
+{
+   display: flex;
+   flex-wrap: wrap;
+   text-decoration: none;
+}
+#logo
+{
+    margin-left:10px;
+    flex:1; 
+   background-color: rgb(255, 255, 255);
+   padding-top: 50px;
+}
+.lien-header 
+{
+    text-decoration:none;
+    color:black;
+}
+.lien-header:hover
+{
+    color:#0065FC;
+}
+#Hébergements:hover
+{
+    border-top: 2px solid #0065FC; 
+}
+#Activités:hover
+{
+    border-top: 2px solid #0065FC;
+}
+#Hébergements
+{
+    width: 150px;
+    text-align: center;
+    font-size: médium;
+    padding-top: 50px;
+}
+#Activités
+{
+    width: 150px;
+    text-align: center;
+    font-size: médium;
+    padding-top:50px;
+}
+
+/*body*/
+body
+{
+    font-family: 'Raleway', sans-serif;
+    background-color: 255 255 255;
+    margin:0%;
+}
+h1
+{
+    font-size:x-large;
+    font-family:'Raleway';
+    color:black;
+}
+h2
+{
+    font-size: large;
+    font-family: 'Raleway';
+    color:black;
+}
+.information 
+{
+    color:grey;
+}
+
+/*barre de recherche*/
+input
+{
+    border:2px solid #F2F2F2;
+    margin-left:45px;
+    border-radius: Opx;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Raleway';
+    font-size: 15px;
+    color:black;
+    font-weight: bold;
+    position:relative;
+    bottom: 40px;
+}
+.fa-location-dot
+{
+    background-color: #F2F2F2;
+    padding: 13px 12px 13px 12px;
+    border-radius: 10px 0px 0px 10px;
+    position: relative;
+    left:14px;   
+    top:37px;
+    z-index:1;
+}
+.barre-de-recherche
+{
+   position:relative;
+   top: 35px;
+   left:5px;
+   margin:0px;
+}
+button
+{
+    border-color:#0065FC;
+    background-color:#0065FC;
+    font-family: 'Raleway';
+    font-size: 15px;
+    border-radius: 0px 12px 12px 0px;
+    padding: 10px 8px 9px 10px;
+    position:relative;
+    left:240px;
+    bottom:46px;
+}
+.buttonsearch
+{
+    color:white;
+}
+.buttonsearch :hover
+{
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #DEEBFF;
+}
+/*@media (max-width:768px)
+    .fa-magnifying-glass {
+    color:white;
+    background-color: #0065FC;
+    position: relative;
+    left: 130px;
+    bottom: 45px ; 
+    padding: 10px 8px 8px 10px;
+    border-radius: 0px 12px 12px 0px;
+    display: none;
+    }
+
+fa-solid fa-magnifying-glass à mettre avec recherche en mode responsive */
+
+/*filtres*/
+.filtres
+{
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    margin:0px;
+}
+.icone-economique
+{
+   color:#0065FC;
+}
+.fa-money-bill-wave
+{
+    position:relative;
+    background-color: #DEEBFF;
+    border-radius: 25px;
+    margin-left: 50px;
+    margin-right:80px;
+    margin-bottom:10px;
+    margin-top: 5px;
+    padding: 13px;
+    z-index: 2;
+}
+.Economique
+{
+    border:2px solid #F2F2F2;
+    border-radius: 20px;
+    padding: 10px 20px 10px 45px;
+    background-color: white;
+    position: relative;
+    left: 60px;
+    bottom: 40px;
+}
+.Economie:hover
+{
+    color:#0065FC;
+}
+.Economique:hover
+{
+    box-shadow: 2px 6px 6px 2px #0065FC;
+}
+.icone-familial
+{
+   color:#0065FC;
+}
+.fa-child-reaching
+{
+    position:relative;
+    background-color: #DEEBFF;
+    border-radius: 30px;
+    margin-left: 80px;
+    margin-right:80px;
+    margin-bottom:10px;
+    margin-top: 5px;
+    padding: 13px;
+    z-index: 3;
+}
+.famille
+{
+    border:2px solid #F2F2F2;
+    border-radius: 20px;
+    padding: 10px 20px 10px 50px;
+    background-color: white;
+    position: relative;
+    left: 80px;
+    bottom: 40px;
+}
+.famille:hover
+{
+    color:#0065FC;
+    background-color:white;
+    box-shadow: 2px 6px 6px 2px #0065FC;
+}
+.icone-romantique
+{
+    color:#0065FC;
+}
+.fa-heart
+{
+    position:relative;
+    background-color: #DEEBFF;
+    border-radius: 30px;
+    margin-left: 25px;
+    margin-right:80px;
+    margin-bottom:10px;
+    margin-top: 5px;
+    padding: 13px;
+    z-index: 4; 
+}
+.romance
+{
+    border:2px solid #F2F2F2;
+    border-radius: 20px;
+    padding: 10px 20px 10px 50px;
+    background-color: white;
+    position: relative;
+    left: 30px;
+    bottom: 40px;
+}
+.Romantique
+{
+    margin-left: 25px;
+}
+.romance:hover
+{
+    color:#0065FC;
+    box-shadow: 2px 6px 6px 2px #0065FC;
+}
+.icone-animaux
+{
+    color:#0065FC;
+}
+.fa-dog
+{
+    position:relative;
+    background-color: #DEEBFF;
+    border-radius: 30px;
+    margin-left: 70px;
+    margin-right:80px;
+    margin-bottom:10px;
+    margin-top: 5px;
+    padding: 13px;
+    z-index: 5; 
+}
+.lesanimaux
+{
+    border:2px solid #F2F2F2;
+    border-radius: 20px;
+    padding: 10px 20px 10px 50px;
+    background-color: white;
+    position: relative;
+    left: 80px;
+    bottom: 40px;
+}
+.lesanimaux:hover
+{
+    color:#0065FC;
+    box-shadow: 2px 6px 6px 2px #0065FC;
+}
+
+/*info*/
+.lieu
+{
+    color: grey;
+}
+.logement
+{
+    display: flex;
+}
+.information
+{
+    margin-left: 10px;
+}
+.fa-info 
+{
+    color:#0065FC; 
+    border-radius: 30px;
+    padding: 2px 2px 2px 2px;
+    margin-left: 5px;
+}
+.icon-information
+{
+    border: 2px solid #F2F2F2;
+    background-color: white;
+    border-radius: 35px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 5px;
+}
+
+main
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+/*Hébergments à Marseille*/
+#hebergementmarseille
+{
+  margin-top:2%; 
+  margin-bottom: 5%; 
+}
+.hebergements
+{
+    width: 55%;
+    background-color: #F2F2F2;
+    border-radius: 3% 2% 3% 2%;
+}
+h2
+{
+    margin:0%;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+.partie1
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    /*voir pour aspect-ration c'est plus intéressant*/
+    background-color: #F2F2F2;
+    border-radius: 3% 2% 3% 2%;
+    font-family: 'Raleway' 'sans-serif';
+}
+.carte
+{
+    margin:2%;
+    width: 25%;
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 10%;
+}
+.texte
+{
+    font-size: 75%;
+    line-height: 8%;
+    margin-left: 3%;
+    color:black;
+}
+a.info-hebergement
+{
+    text-decoration:none;
+    color: black;
+}
+a.info-hebergement :hover
+{
+    color:#0065FC;
+}
+        /*auberge la cannebiere*/
+.aubergelacannebiere
+{
+    object-fit:fill;
+    width: 98%;
+    margin-left:1%;
+    position: relative;
+    border-radius: 12% 12% 0% 0%; 
+}
+.etoile1
+{
+    color:#0065FC;
+}
+.etoile1 :nth-child(5)
+{
+    color: #F2F2F2;
+}
+        /*hotel du port*/
+.hotelduport
+{
+    object-fit:fill;
+    width: 98%;
+    margin-left:1%;
+    position: relative;
+    border-radius: 12% 12% 0% 0%; 
+}
+.etoile2
+{
+    color: #0065FC;
+}
+        /*hotel les mouettes*/
+.hotellesmouettes
+{
+    object-fit:fill;
+    width: 98%;
+    margin-left:1%;
+    position: relative;
+    border-radius: 12% 12% 0% 0%; 
+}
+.etoile3
+{
+    color:#0065FC;
+}
+.etoile3 :nth-child(5)
+{
+    color: #F2F2F2;
+}
+        /*hotel de la mer*/
+.hoteldelamer
+{
+    object-fit:fill;
+    width: 98%;
+    height: 37%;
+    margin-left:1%;
+    position: relative;
+    border-radius: 12% 12% 0% 0%; 
+}
+.etoile4
+{
+    color:#0065FC;
+}
+.etoile4 :nth-child(4)
+{
+    color: #F2F2F2;
+}
+.etoile4 :nth-child(5)
+{
+    color: #F2F2F2;
+}
+        /*auberge le panier*/
+.aubergelepanier
+{
+    object-fit:fill;
+    width: 98%;
+    height: 37%;
+    margin-left:1%;
+    position: relative;
+    border-radius: 12% 12% 0% 0%; 
+}
+.etoile5
+{
+    color:#0065FC;
+}
+        /*hotel chez amina*/
+.hotelchezamina
+{
+    object-fit:fill;
+    width: 98%;
+    height: 37%;
+    margin-left:1%;
+    position: relative;
+    border-radius: 12% 12% 0% 0%; 
+}
+.etoile6
+{
+    color:#0065FC;
+}
+.afficherplus
+{
+    color:black;
+    margin: 3%;
+}
+.afficherplus :hover
+{
+    color:#0065FC;
+}
+/*Les plus populaires*/
+.partie2
+{
+    display: flex;
+    flex-direction: column;
+    /*voir pour aspect-ration c'est plus intéressant*/
+    background-color: #F2F2F2;
+    border-radius: 3% 2% 3% 2%;
+    font-family: 'Raleway' 'sans-serif';
+}
+.lespluspopulaires
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    width: 30%;
+    background-color: #F2F2F2;
+    padding:2%;
+    border-radius: 3% 2% 3% 2%;
+    gap:10%;
+}
+.superetoile
+{
+    position:relative;
+    bottom: 6%;
+    left: 90%;
+}
+h2
+{
+    text-align: left;
+    margin:0%;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+a.infopopulaires
+{
+    text-decoration:none;
+    color: black;
+}
+a.infopopulaires :hover
+{
+    color:#0065FC;
+}
+.cartepopulaire
+{
+    margin:2%;
+    width: 85%;
+    display: inline-block; 
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 5% 7% 5% 7%;
+}
+.textepopulaire
+{
+    font-size: 75%;
+    line-height: 8%;
+    margin-right: 3%;
+    margin-top: 5%;
+    color:black;
+    display: inline-block;
+}
+        /*hotel le soleil du matin*/
+.lesoleildumatin
+{
+    object-fit:cover;
+    width: 35%;
+    height: 95%;
+    position: relative;
+    border-radius: 10% 0% 0% 8%;
+    border: 3px solid white;   
+}
+.etoilepopulaire1
+{
+    color:#0065FC;
+    display: inline-block;
+}
+        /*au coeur de l'eau chambres d'hotes*/
+.aucoeurdeleau
+{
+    object-fit:cover;
+    width: 35%;
+    height: 95%;
+    position: relative;
+    border-radius: 10% 0% 0% 8%;
+    border: 3px solid white;   
+}
+.etoilepopulaire2
+{
+    color:#0065FC;
+    display: inline-block;
+}
+.etoilepopulaire2 :nth-child(5)
+{
+    color: #F2F2F2;
+}
+        /*hotel tout bleu et blanc*/
+.bleuetblanc
+{
+    object-fit:cover;
+    width: 35%;
+    height: 95%;
+    position: relative;
+    border-radius: 10% 0% 0% 8%;
+    border: 3px solid white;   
+}
+.etoilepopulaire3
+{
+    color:#0065FC;
+    display: inline-block;
+}
+.etoilepopulaire3 :nth-child(5)
+{
+    color: #F2F2F2;
+}
+
+/*Activités à Marseille*/
+#activitesmarseille
+{
+    font-family: 'Relaway' 'sans-serif';
+    font-size: large;
+    color: black;
+}
+.activites
+{
+    display: block;
+}
+
+
+/*footer*/
+h5
+{
+    font-size:15px;
+}
+footer
+{
+    background-color:#F2F2F2;
+}
+#blockfooter
+{
+    display:flex;
+    justify-content: space-between;
+    background-color:#F2F2F2;
+}
+.aside-footer
+{
+    margin-left:20px;
+    width: 300px;
+    background-color:#F2F2F2;
+    font-size: small;
+    padding-left:auto;
+}
+ul
+{
+    list-style-type: none;
+    padding-left: 0px;
+    line-height: 25px;
+}
+a
+{
+   color:grey;
+   text-decoration: none;
+}
+
+/*responsive, voir le header*/
+@media (max-width:768px) 
+    .menu{
+        flex-wrap:wrap;
+    }
+    .filtres{
+        flex-wrap: wrap;
+    }
+    .hebergement-marseille
+    {
+        flex-wrap: wrap;
+    }
+    #blockfooter{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
