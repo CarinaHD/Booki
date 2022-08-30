@@ -14,7 +14,7 @@
 {
     margin-left:10px;
     flex:1; 
-   background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 .lien-header 
 {
@@ -132,9 +132,15 @@ button
   text-decoration: none;
   text-shadow: 1px 1px 1px #DEEBFF;
 }
-@media (max-width:768px) .fa-magnifying-glass 
+
+@media screen and (min-width:425px).fa-magnifying-glass 
 {
-    background-color:
+    color:white;
+    position: relative;
+    left:240px;
+    bottom: 47px;
+    background-color: #0065FC;
+    padding:13px 12px 13px 12px;
     border-radius: 0px 12px 12px 0px;
 }
 
@@ -145,7 +151,7 @@ button
     font-size: 15px;
     display: flex;
 }
-.icone-economique
+.icone
 {
    color:#0065FC;
 }
@@ -179,10 +185,6 @@ button
 {
     box-shadow: 2px 6px 6px 2px #0065FC;
 }
-.icone-familial
-{
-   color:#0065FC;
-}
 .fa-child-reaching
 {
     position:relative;
@@ -210,10 +212,6 @@ button
     color:#0065FC;
     background-color:white;
     box-shadow: 2px 6px 6px 2px #0065FC;
-}
-.icone-romantique
-{
-    color:#0065FC;
 }
 .fa-heart
 {
@@ -245,10 +243,6 @@ button
 {
     color:#0065FC;
     box-shadow: 2px 6px 6px 2px #0065FC;
-}
-.icone-animaux
-{
-    color:#0065FC;
 }
 .fa-dog
 {
@@ -319,6 +313,10 @@ h2
 {
     margin-top: 4%;
     margin-left: 4%;
+}
+@media screen and (min-width:425px) .sectionhebergement
+{
+   flex-direction: column; 
 }
 .partie1
 {
@@ -444,6 +442,10 @@ h2
     background-color: #F2F2F2;
     border-radius: 3% 2% 3% 2%;
 }
+@media screen and (min-width:425px).sectionpopulaire
+{
+   flex-direction: row-reverse 
+}
 h2
 {
     margin:0%;
@@ -550,7 +552,7 @@ h2
     font-family: 'Raleway' 'sans-serif';
     font-size: large;
     color: black;
-    width: 100%;
+    margin-bottom: 4%;
 }
 .lesactivitesmarseillaises
 {
@@ -598,7 +600,7 @@ h4
     border-radius: 5%;
     display: flex;
     flex-direction: column;
-    gap:4rem;
+    gap:3rem;
 }
 .vieuxport
 {
@@ -610,14 +612,14 @@ h4
 .fortpomegues
 {
     object-fit: cover;
-    aspect-ratio:4/3;
+    aspect-ratio:2;
     width: 100%;
     border-radius: 5% 5% 0 0;
 }
 .ilesfrioul
 {
     object-fit: cover;
-    aspect-ratio:4/2;
+    aspect-ratio:3;
     width: 100%;
     border-radius: 5% 5% 0 0
 }
@@ -631,7 +633,7 @@ h4
 .notredamelagarde 
 {
     object-fit: cover;
-    aspect-ratio:4/2;
+    aspect-ratio:2;
     width: 100%;
     border-radius: 5% 5% 0 0;
 }
@@ -643,6 +645,7 @@ h4
     border-radius: 5% 5% 0 0;
     object-fit: cover;
     width: 100%;
+    aspect-ratio:2;
 }
 
 
@@ -681,9 +684,9 @@ a
    color:grey;
    text-decoration: none;
 }
-*/
+
 /*responsive, voir le header*/
-@media (max-width:768px) 
+@media (max-width:425px) 
     .menu{
         flex-wrap:wrap;
     }
