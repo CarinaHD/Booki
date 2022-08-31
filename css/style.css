@@ -28,7 +28,7 @@
 }
 #Hébergements:hover
 {
-    border-top: 2px solid #0065FC; 
+    border-top: 2px solid transparent; 
     
 }
 #Activités:hover
@@ -133,7 +133,13 @@ button
   text-shadow: 1px 1px 1px #DEEBFF;
 }
 
-@media screen and (min-width:425px).fa-magnifying-glass 
+ .loupe
+{
+    display:none;
+}
+
+@media screen and (min-width:425px)
+    {.loupe 
 {
     color:white;
     position: relative;
@@ -143,7 +149,12 @@ button
     padding:13px 12px 13px 12px;
     border-radius: 0px 12px 12px 0px;
 }
-
+    }
+    {.buttonsearch
+{
+    display:none;
+}
+    }
 /*filtres*/
 .filtres
 {
@@ -300,12 +311,12 @@ main
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem ;
+    justify-content: space-between ;
 }
 /*Hébergments à Marseille*/
 .sectionhebergement
 {
-    width: 60%;
+    width: 55%;
     background-color: #F2F2F2;
     border-radius: 3% 2% 3% 2%;
 }
@@ -438,7 +449,7 @@ h2
 {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     background-color: #F2F2F2;
     border-radius: 3% 2% 3% 2%;
 }
@@ -450,7 +461,7 @@ h2
 {
     margin:0%;
     margin-top: 4%;
-    margin-left: 8%;
+    margin-left: 4%;
 }
 .superetoile
 {
@@ -500,6 +511,7 @@ h2
     font-size: 75%;
     color:black;
     text-align:left;
+    position: relative;
 }
 .imgpopulaire
 {
@@ -507,7 +519,6 @@ h2
     width: 40%;
     border-radius: 10% 0% 0% 8%;
     border: 3px solid white;  
-    display: flex;
     aspect-ratio:1;
 }
         /*hotel le soleil du matin*/
@@ -517,6 +528,8 @@ h2
     text-align: right;
     margin-right: 10%;
     display: flex;
+    position: absolute;
+    bottom: 10px;
 }
         /*au coeur de l'eau chambres d'hotes*/
 .etoilepopulaire2
@@ -525,6 +538,8 @@ h2
     text-align: right;
     margin-right: 10%;
     display: flex;
+    position: absolute;
+    bottom: 10px;
 }
 .etoilepopulaire2 :nth-child(5)
 {
@@ -539,6 +554,8 @@ h2
     text-align: right;
     margin-right: 10%;
     display: flex;
+    position: absolute;
+    bottom: 10px;
 }
 .etoilepopulaire3 :nth-child(5)
 {
@@ -553,6 +570,7 @@ h2
     font-size: large;
     color: black;
     margin-bottom: 4%;
+    width: 100%;
 }
 .lesactivitesmarseillaises
 {
@@ -594,6 +612,7 @@ h4
 {
     display: flex; 
     border-radius: 5%;
+    width: 25%;
 }
 .conteneurduo
 {
@@ -601,6 +620,7 @@ h4
     display: flex;
     flex-direction: column;
     gap:3rem;
+    width: 25%;
 }
 .vieuxport
 {
