@@ -23,12 +23,13 @@
 }
 .lien-header:hover
 {
-    color:#0065FC;
+    color: #0065FC;
+    border-top: solid transparent;
 
 }
 #Hébergements:hover
 {
-    border-top: 2px solid transparent; 
+    border-top: 2px solid #0065FC; 
     
 }
 #Activités:hover
@@ -575,7 +576,8 @@ h2
 .lesactivitesmarseillaises
 {
     display: flex;
-    gap:3rem;
+    gap: 5rem;
+    margin:none;
 }
 h4
 {
@@ -590,9 +592,11 @@ h4
     font-family:'Raleway''sans-sérif';
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     margin-left: 8%;
     text-decoration: none;
+    padding-top:5%;
+    padding-bottom: 5%;
+
 }
 .classactivites
 {
@@ -600,13 +604,7 @@ h4
     font-weight: bold;
     font-size: 85%;
     font-family:'Raleway''sans-sérif';
-    box-shadow: 0px 2px 4px 0;
-    border-radius: 5%;
-}
-.classactivites:hover 
-{
-    box-shadow: 0px 4px 6px 0;
-    border-radius: 5%;
+    
 }
 .conteneursolo
 {
@@ -619,7 +617,6 @@ h4
     border-radius: 5%;
     display: flex;
     flex-direction: column;
-    gap:3rem;
     width: 25%;
 }
 .vieuxport
@@ -628,6 +625,17 @@ h4
     border-radius: 5% 5% 0 0;
     width: 100%;
     aspect-ratio:1;
+}
+.sorties
+{
+    margin-bottom: 3%;
+    box-shadow: 0px 1px 1px 0px;
+    border-radius: 5%;
+}
+.sorties:hover
+{
+    box-shadow: 0px 4px 6px 0;
+    border-radius: 5%;
 }
 .fortpomegues
 {
@@ -652,8 +660,8 @@ h4
 }
 .notredamelagarde 
 {
-    object-fit: cover;
-    aspect-ratio:2;
+    object-fit: fill;
+    aspect-ratio: 3;
     width: 100%;
     border-radius: 5% 5% 0 0;
 }
