@@ -1,4 +1,8 @@
-/*header*/
+            /*header*/
+.header
+{
+    display: flex;
+}
 .navigator
 {
     background-color:  rgb(255, 255, 255);
@@ -8,7 +12,15 @@
    display: flex;
    flex-wrap: wrap;
    text-decoration: none;
-   align-items: center;
+}
+@media (max-width:420px){
+    .menu {
+        width:100%;
+        justify-content: center;
+    }
+    #logo{
+        text-align: center;
+    }
 }
 #logo
 {
@@ -53,7 +65,9 @@
     list-style-type: none;
 }
 
-/*body*/
+
+
+            /*body*/
 body
 {
     font-family: 'Raleway', sans-serif;
@@ -75,12 +89,18 @@ h2
     font-family: 'Raleway';
     color:black;
 }
+@media screen and (max-width:320px){
+        h1 h2{
+            text-align: center;
+        }
+}
+
 .information 
 {
     color:grey;
 }
 
-/*barre de recherche*/
+            /*barre de recherche*/
 input
 {
     border:2px solid #F2F2F2;
@@ -136,32 +156,32 @@ button
 
  .loupe
 {
-    display:none;
+    display: none;
 }
 
-@media screen and (min-width:425px)
-    {.loupe 
-{
-    color:white;
-    position: relative;
-    left:240px;
-    bottom: 47px;
-    background-color: #0065FC;
-    padding:13px 12px 13px 12px;
-    border-radius: 0px 12px 12px 0px;
+@media screen and (max-width:768px){
+    .loupe {
+        display: flex;
+        color:white;
+        position: relative;
+        left:240px;
+        bottom: 47px;
+        background-color: #0065FC;
+        padding:10px 12px 13px 12px;
+        border-radius: 0px 12px 12px 0px;
+}   
+    .buttonsearch{
+    display: none;
 }
-    }
-    {.buttonsearch
-{
-    display:none;
 }
-    }
-/*filtres*/
+    
+            /*filtres*/
 .filtres
 {
     font-weight: bold;
     font-size: 15px;
     display: flex;
+    flex-wrap: wrap;
 }
 .icone
 {
@@ -189,7 +209,7 @@ button
     left: 60px;
     bottom: 40px;
 }
-.Economie:hover
+.lesfiltres:hover
 {
     color:#0065FC;
 }
@@ -247,10 +267,6 @@ button
     left: 30px;
     bottom: 40px;
 }
-.Romantique
-{
-    margin-left: 25px;
-}
 .romance:hover
 {
     color:#0065FC;
@@ -284,7 +300,12 @@ button
     box-shadow: 2px 6px 6px 2px #0065FC;
 }
 
-/*info*/
+@media screen and (max-width:380px) { 
+    .filtres{
+        flex-direction: column;
+    }
+}
+            /*info*/
 .logement
 {
     display: flex;
@@ -314,7 +335,7 @@ main
     flex-wrap: wrap;
     justify-content: space-between ;
 }
-/*Hébergments à Marseille*/
+            /*Hébergments à Marseille*/
 .sectionhebergement
 {
     width: 55%;
@@ -326,10 +347,7 @@ h2
     margin-top: 4%;
     margin-left: 4%;
 }
-@media screen and (min-width:425px) .sectionhebergement
-{
-   flex-direction: column; 
-}
+
 .partie1
 {
     display: flex;
@@ -365,7 +383,7 @@ h2
 {
     object-fit:fill;
     border-radius: 12% 12% 0% 0%;
-    aspect-ratio: 2;
+    aspect-ratio: 2/1;
 }
 .texte
 {
@@ -389,7 +407,7 @@ h2
     line-height: 0%;
     display: flex;
 }
-        /*auberge la cannebiere*/
+            /*auberge la cannebiere*/
 
 .etoile1
 {
@@ -399,12 +417,12 @@ h2
 {
     color: #F2F2F2;
 }
-        /*hotel du port*/
+            /*hotel du port*/
 .etoile2
 {
     color: #0065FC;
 }
-        /*hotel les mouettes*/
+            /*hotel les mouettes*/
 .etoile3
 {
     color:#0065FC;
@@ -413,7 +431,7 @@ h2
 {
     color: #F2F2F2;
 }
-        /*hotel de la mer*/
+            /*hotel de la mer*/
 .etoile4
 {
     color:#0065FC;
@@ -426,12 +444,12 @@ h2
 {
     color: #F2F2F2;
 }
-        /*auberge le panier*/
+            /*auberge le panier*/
 .etoile5
 {
     color:#0065FC;
 }
-        /*hotel chez amina*/
+            /*hotel chez amina*/
 .etoile6
 {
     color:#0065FC;
@@ -442,10 +460,18 @@ h2
     text-decoration:none;
     text-align: left;
     font-weight: bold;
-    margin-left: 8%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
 
-/*Les plus populaires*/
+@media screen and (max-width:768px) {
+    .carte {
+        flex-wrap: wrap;
+        width: 100%;
+    } 
+}
+
+            /*Les plus populaires*/
 .sectionpopulaire
 {
     display: flex;
@@ -454,10 +480,7 @@ h2
     background-color: #F2F2F2;
     border-radius: 3% 2% 3% 2%;
 }
-@media screen and (min-width:425px).sectionpopulaire
-{
-   flex-direction: row-reverse 
-}
+
 h2
 {
     margin:0%;
@@ -513,16 +536,17 @@ h2
     color:black;
     text-align:left;
     position: relative;
+    gap:2rem;
 }
 .imgpopulaire
 {
-    object-fit:fill;
+    object-fit:cover;
     width: 40%;
     border-radius: 10% 0% 0% 8%;
     border: 3px solid white;  
-    aspect-ratio:1;
+    aspect-ratio:1/1;
 }
-        /*hotel le soleil du matin*/
+            /*hotel le soleil du matin*/
 .etoilepopulaire1
 {
     color:#0065FC;
@@ -532,7 +556,7 @@ h2
     position: absolute;
     bottom: 10px;
 }
-        /*au coeur de l'eau chambres d'hotes*/
+            /*au coeur de l'eau chambres d'hotes*/
 .etoilepopulaire2
 {
     color:#0065FC;
@@ -547,7 +571,7 @@ h2
     color: #F2F2F2;
     display: flex;
 }
-        /*hotel tout bleu et blanc*/
+            /*hotel tout bleu et blanc*/
         
 .etoilepopulaire3
 {
@@ -564,7 +588,15 @@ h2
     display: flex;
 }
 
-/*Activités à Marseille*/
+@media (max-width:768px) {
+    .main {
+        flex-direction:column-reverse;
+        height:auto;
+        width: 100%;
+    }
+}
+
+            /*Activités à Marseille*/
 #activites
 {
     font-family: 'Raleway' 'sans-serif';
@@ -576,8 +608,15 @@ h2
 .lesactivitesmarseillaises
 {
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     margin:none;
+}
+@media screen and (max-width:768px){
+    .lesactivitesmarseillaises{
+        flex-direction: column;
+        width: 100%;
+    }
+    
 }
 h4
 {
@@ -610,25 +649,27 @@ h4
 {
     display: flex; 
     border-radius: 5%;
-    width: 25%;
+    width: 30%;
 }
 .conteneurduo
 {
     border-radius: 5%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
     width: 25%;
+    
 }
 .vieuxport
 {
     object-fit: cover;
     border-radius: 5% 5% 0 0;
     width: 100%;
-    aspect-ratio:1;
+    aspect-ratio:1/1;
 }
 .sorties
 {
-    margin-bottom: 3%;
     box-shadow: 0px 1px 1px 0px;
     border-radius: 5%;
 }
@@ -640,14 +681,14 @@ h4
 .fortpomegues
 {
     object-fit: cover;
-    aspect-ratio:2;
+    aspect-ratio:2/1;
     width: 100%;
     border-radius: 5% 5% 0 0;
 }
 .ilesfrioul
 {
     object-fit: cover;
-    aspect-ratio:3;
+    aspect-ratio:3/1;
     width: 100%;
     border-radius: 5% 5% 0 0
 }
@@ -656,12 +697,12 @@ h4
     object-fit: cover;
     border-radius: 5% 5% 0 0;
     width: 100%;
-    aspect-ratio:1;
+    aspect-ratio:1/1;
 }
 .notredamelagarde 
 {
     object-fit: fill;
-    aspect-ratio: 3;
+    aspect-ratio: 3/1;
     width: 100%;
     border-radius: 5% 5% 0 0;
 }
@@ -673,12 +714,12 @@ h4
     border-radius: 5% 5% 0 0;
     object-fit: cover;
     width: 100%;
-    aspect-ratio:2;
+    aspect-ratio:2/1;
 }
 
 
 
-/*footer*/
+            /*footer*/
 h5
 {
     font-size:15px;
@@ -713,21 +754,11 @@ a
    text-decoration: none;
 }
 
-/*responsive, voir le header*/
-@media (max-width:425px) 
-    .menu{
-        flex-wrap:wrap;
-    }
-    .filtres{
-        flex-wrap: wrap;
-    }
-    .hebergement-marseille
-    {
-        flex-wrap: wrap;
-    }
+@media (max-width:768px) {
     #blockfooter{
         display: flex;
         flex-wrap: wrap;
         height: auto;
     }
-    
+}
+
