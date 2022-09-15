@@ -613,7 +613,7 @@ h2
 }
 @media screen and (max-width:768px){
     .lesactivitesmarseillaises{
-        flex-direction: column;
+        flex-wrap:wrap;
         width: 100%;
     }
     
@@ -757,7 +757,6 @@ a
 @media (max-width:768px) {
     #blockfooter{
         display: flex;
-        flex-wrap: wrap;
         height: auto;
     }
 }
