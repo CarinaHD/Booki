@@ -335,16 +335,20 @@ main
     flex-wrap: wrap;
     justify-content: space-between ;
 }
+@media screen and (max-width: 768px){
+    main {
+        gap:2rem;
+    }
+}
             /*Hébergments à Marseille*/
 .sectionhebergement
 {
     width: 55%;
-    background-color: #F2F2F2;
     border-radius: 3% 2% 3% 2%;
+    padding: 0 2%;
 }
 h2
 {
-    margin-top: 4%;
     margin-left: 4%;
 }
 
@@ -355,6 +359,7 @@ h2
     align-items: center;
     background-color: #F2F2F2;
     border-radius: 3% 2% 3% 2%;
+    padding: 0 4% 5% 4%;
 }
 .info-hebergement
 {
@@ -362,7 +367,7 @@ h2
     flex-direction: column;
     background-color: white;
     border: 4px solid white; 
-    margin:2%;
+    flex-grow: 1;
     border-radius: 11% 10% 11% 10%;
     text-decoration: none;
     width: 25%;
@@ -370,9 +375,12 @@ h2
 }
 .carte
 {
+    width: 100%;
     display: flex; 
     flex-wrap: wrap;
     justify-content:center;
+    gap:1rem;
+    padding-top: 1%;
 }
 .info-hebergement:hover
 {
@@ -382,6 +390,7 @@ h2
 .imgcarte
 {
     object-fit:fill;
+    width: 100%;
     border-radius: 12% 12% 0% 0%;
     aspect-ratio: 2/1;
 }
@@ -391,6 +400,7 @@ h2
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
+    padding: 2%;
 }
 .nomhebergement
 {
@@ -465,10 +475,17 @@ h2
 }
 
 @media screen and (max-width:768px) {
-    .carte {
-        flex-wrap: wrap;
+    .sectionhebergement {
+        flex-direction:column-reverse;
+        height:auto;
         width: 100%;
-    } 
+    }
+    .partie1{
+        flex-wrap: wrap;
+    }
+    .info-hebergement{
+        width: 50%;
+    }
 }
 
             /*Les plus populaires*/
@@ -480,23 +497,16 @@ h2
     background-color: #F2F2F2;
     border-radius: 3% 2% 3% 2%;
 }
-
-h2
+.h2populaire
 {
-    margin:0%;
-    margin-top: 4%;
-    margin-left: 4%;
-}
-.superetoile
-{
-    position:relative;
-    bottom: 3%;
-    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15% 0 5%;
 }
 .partie2
 {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     border-radius: 3% 2% 3% 2%;
     font-family: 'Raleway' 'sans-serif';
     align-items: center;
@@ -524,11 +534,11 @@ h2
 }
 .cartepopulaire
 {
-    margin:2%;
     width: 90%;
     display: flex;
     flex-direction: column;
     border-radius: 5% 7% 5% 7%;
+    padding-left: 4%;
 }
 .textepopulaire
 {
@@ -536,12 +546,12 @@ h2
     color:black;
     text-align:left;
     position: relative;
-    gap:2rem;
+    margin-left:2%;
 }
 .imgpopulaire
 {
     object-fit:cover;
-    width: 40%;
+    width: 30%;
     border-radius: 10% 0% 0% 8%;
     border: 3px solid white;  
     aspect-ratio:1/1;
@@ -589,11 +599,18 @@ h2
 }
 
 @media (max-width:768px) {
-    .main {
-        flex-direction:column-reverse;
-        height:auto;
+    .sectionpopulaire {
+        flex-direction:column;
         width: 100%;
+        order: -1;
     }
+    .infopopulaires{
+        width:100%;
+    }
+    .imgpopulaire{
+        
+    }
+
 }
 
             /*Activités à Marseille*/
@@ -608,15 +625,23 @@ h2
 .lesactivitesmarseillaises
 {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     margin:none;
+    padding-bottom: 2%;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:320px){
     .lesactivitesmarseillaises{
-        flex-wrap:wrap;
-        width: 100%;
+        flex-direction: column;
+    }  
+} 
+
+@media screen and (max-width: 768px){
+    .lesactivitesmarseillaises{
+        flex-wrap: wrap;
+    }   
+    .conteneursolo{
+       
     }
-    
 }
 h4
 {
@@ -659,7 +684,6 @@ h4
     justify-content: space-between;
     gap: 2rem;
     width: 25%;
-    
 }
 .vieuxport
 {
@@ -701,7 +725,7 @@ h4
 }
 .notredamelagarde 
 {
-    object-fit: fill;
+    object-fit: cover;
     aspect-ratio: 3/1;
     width: 100%;
     border-radius: 5% 5% 0 0;
@@ -757,7 +781,10 @@ a
 @media (max-width:768px) {
     #blockfooter{
         display: flex;
-        height: auto;
     }
 }
-
+@media (max-width:340px) {
+    #blockfooter{
+        display: flex;
+        flex-wrap: wrap;
+}
