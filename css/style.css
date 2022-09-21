@@ -340,6 +340,7 @@ main
         gap:2rem;
     }
 }
+
             /*Hébergments à Marseille*/
 .sectionhebergement
 {
@@ -351,14 +352,13 @@ h2
 {
     margin-left: 4%;
 }
-
 .partie1
 {
     display: flex;
+    border-radius: 3% 2% 3% 2%;
     flex-wrap: wrap;
     align-items: center;
     background-color: #F2F2F2;
-    border-radius: 3% 2% 3% 2%;
     padding: 0 4% 5% 4%;
 }
 .info-hebergement
@@ -477,14 +477,45 @@ h2
 @media screen and (max-width:768px) {
     .sectionhebergement {
         flex-direction:column-reverse;
-        height:auto;
         width: 100%;
+        padding:0%;
+    }
+    h2{
+        font-size: 25px;
     }
     .partie1{
         flex-wrap: wrap;
     }
     .info-hebergement{
         width: 50%;
+        
+    }
+    .imgcarte{
+        aspect-ratio: 4/1;
+        object-fit: cover;
+    }
+    .texte{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:425px) {
+    .sectionhebergement {
+        flex-direction:column-reverse;
+        width: 100%;
+        padding:0%;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .partie1{
+        flex-wrap: wrap;
+    }
+    .info-hebergement{
+        width: 50%;
+    }
+    .imgcarte{
+        aspect-ratio: 2/1;
+        object-fit: cover;
     }
 }
 
@@ -598,22 +629,32 @@ h2
     display: flex;
 }
 
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
     .sectionpopulaire {
-        flex-direction:column;
         width: 100%;
         order: -1;
     }
-    .infopopulaires{
-        width:100%;
+    .imgpopulaire{
+        width: 50%;
+        height: 200px;
+    }
+    .textepopulaire{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:425px) {
+    .sectionpopulaire {
+        width: 100%;
+        order: -1;
     }
     .imgpopulaire{
-        
-    }
-
+        width: 50%;
+        height: 150px;
+    }  
 }
 
             /*Activités à Marseille*/
+
 #activites
 {
     font-family: 'Raleway' 'sans-serif';
@@ -629,118 +670,123 @@ h2
     margin:none;
     padding-bottom: 2%;
 }
-@media screen and (max-width:320px){
-    .lesactivitesmarseillaises{
-        flex-direction: column;
-    }  
-} 
-
-@media screen and (max-width: 768px){
-    .lesactivitesmarseillaises{
-        flex-wrap: wrap;
-    }   
-    .conteneursolo{
-       
-    }
-}
 h4
 {
-    font-family: 'Raleway' 'sans-serif';
-    color:black;
+font-family: 'Raleway' 'sans-serif';
+color:black;
 }
 .textactivites
 {
-    color:black;
-    font-weight: bold;
-    font-size: 85%;
-    font-family:'Raleway''sans-sérif';
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 8%;
-    text-decoration: none;
-    padding-top:5%;
-    padding-bottom: 5%;
-
+color:black;
+font-weight: bold;
+font-size: 85%;
+font-family:'Raleway''sans-sérif';
+display: flex;
+flex-wrap: wrap;
+margin-left: 8%;
+text-decoration: none;
+padding-top:5%;
+padding-bottom: 5%;
 }
 .classactivites
 {
-    color: black;
-    font-weight: bold;
-    font-size: 85%;
-    font-family:'Raleway''sans-sérif';
-    
+color: black;
+font-weight: bold;
+font-size: 85%;
+font-family:'Raleway''sans-sérif';   
 }
 .conteneursolo
 {
-    display: flex; 
-    border-radius: 5%;
-    width: 30%;
+display: flex; 
+border-radius: 5%;
+width: 30%;
 }
 .conteneurduo
 {
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-    width: 25%;
+border-radius: 5%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+gap: 2rem;
+width: 25%;
 }
 .vieuxport
 {
-    object-fit: cover;
-    border-radius: 5% 5% 0 0;
-    width: 100%;
-    aspect-ratio:1/1;
+object-fit: cover;
+border-radius: 5% 5% 0 0;
+width: 100%;
+aspect-ratio:1/1;
 }
 .sorties
 {
-    box-shadow: 0px 1px 1px 0px;
-    border-radius: 5%;
+box-shadow: 0px 1px 1px 0px;
+border-radius: 5%;
 }
 .sorties:hover
 {
-    box-shadow: 0px 4px 6px 0;
-    border-radius: 5%;
+box-shadow: 0px 4px 6px 0;
+border-radius: 5%;
 }
 .fortpomegues
 {
-    object-fit: cover;
-    aspect-ratio:2/1;
-    width: 100%;
-    border-radius: 5% 5% 0 0;
+object-fit: cover;
+aspect-ratio:2/1;
+width: 100%;
+border-radius: 5% 5% 0 0;
 }
 .ilesfrioul
 {
-    object-fit: cover;
-    aspect-ratio:3/1;
-    width: 100%;
-    border-radius: 5% 5% 0 0
+object-fit: cover;
+aspect-ratio:3/1;
+width: 100%;
+border-radius: 5% 5% 0 0
 }
 .parccalanques 
 {
-    object-fit: cover;
-    border-radius: 5% 5% 0 0;
-    width: 100%;
-    aspect-ratio:1/1;
+object-fit: cover;
+border-radius: 5% 5% 0 0;
+width: 100%;
+aspect-ratio:1/1;
 }
 .notredamelagarde 
 {
-    object-fit: cover;
-    aspect-ratio: 3/1;
-    width: 100%;
-    border-radius: 5% 5% 0 0;
+object-fit: cover;
+aspect-ratio: 3/1;
+width: 100%;
+border-radius: 5% 5% 0 0;
 }
 .parclongchamp 
 {
-    display: flex; 
-    flex-wrap: wrap; 
-    background-color: white;
-    border-radius: 5% 5% 0 0;
-    object-fit: cover;
-    width: 100%;
-    aspect-ratio:2/1;
+display: flex; 
+flex-wrap: wrap; 
+background-color: white;
+border-radius: 5% 5% 0 0;
+object-fit: cover;
+width: 100%;
+aspect-ratio:2/1;
+}
+@media screen and (max-width:420px){
+    .classactivites{
+
+    }
 }
 
+            
+@media screen and (max-width: 768px){
+.lesactivitesmarseillaises{
+flex-wrap: wrap;
+justify-content: center;
+}   
+.conteneursolo{
+    width:280px;
+    height: 300px;
+    padding-bottom: 20px;
+}
+.conteneurduo{
+    width:250px;
+    height: 300px;
+}
+}
 
 
             /*footer*/
